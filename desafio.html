@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js">
+
+    </script>
+</head>
+<body style="display: flex; align-items: center; justify-content: center; gap: 15vh;">
+  
+    <div>
+        <canvas id="myChart"  style="position: relative; height:35vh; width:20vw">
+            
+        </canvas>
+      </div>
+
+      <div>
+        <canvas id="myChart2"  style="position: relative; height:35vh; width:20vw">
+            
+        </canvas>
+      </div>
+
+      <div>
+      <canvas id="myChart3"  style="position: relative; height:35vh; width:20vw">
+            
+      </canvas>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
+
+<script>
+    
+  const ctx = document.getElementById('myChart');
+
+
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+    datasets: [{
+      label: 'Temperatura',
+      backgroundColor : 'rgb(255,0,0)',
+      borderColor:'rgb(255,0,0)',
+      data: [30, 29, 28, 25, 22, 23],
+      borderWidth: 1,
+      
+    },
+    {
+      label: 'Umidade',
+      backgroundColor : 'rgb(0,255  ,255)',
+      borderColor:'rgb(0,255  ,255)',
+      data: [80, 82, 80, 85, 80, 83],
+      borderWidth: 1,
+      
+    }
+],
+    
+    
+    
+  },
+  
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+  
+});
+
+
+</script>
+
+<script>
+    
+    const ctax = document.getElementById('myChart2');
+  
+  
+  
+  new Chart(ctax, {
+    type: 'bar',
+    data: {
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+      datasets: [{
+        label: 'Temperatura',
+        backgroundColor : 'rgb(255,0,0)',
+        data: [22, 24, 27, 23, 20, 18],
+        borderWidth: 1,
+        
+      },
+      {
+        label: 'Umidade',
+        backgroundColor : 'rgb(0,255  ,255)',
+        data: [90, 89, 93, 87, 88, 82],
+        borderWidth: 1,
+        
+      }
+  ],
+      
+      
+      
+    },
+    
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+    
+  });
+  
+  
+  </script>
+  
+  <script>
+    
+    const ctaex = document.getElementById('myChart3');
+  
+  
+  
+  new Chart(ctaex, {
+    type: 'doughnut',
+    data: {
+      labels: ['Ouro'],
+      datasets: [{
+        label: 'Ouro',
+        backgroundColor : '#ffd700',
+        data: [391],
+        borderWidth: 1,
+        
+      },
+      {
+        labels: ['Prata'],
+        label: 'Prata',
+        backgroundColor : '#C0C0C0',
+        data: [4],
+        borderWidth: 1,
+        
+      },
+      {
+        label: 'Bronze',
+        backgroundColor : '#DB9370',
+        data: [3],
+        borderWidth: 1,
+        
+      }
+  ],
+      
+      
+      
+    },
+    
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+    
+  });
+  
+  
+  </script>
+
+
